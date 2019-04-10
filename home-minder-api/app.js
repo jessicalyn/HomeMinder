@@ -1,9 +1,11 @@
 const express = require('express');
-const app = express();
 const cors = require('cors')
-const shortid = require('shortid');
-app.use(express.json());
+const app = express();
+
 app.use(cors());
+app.use(express.json());
+
+const shortid = require('shortid');
 
 app.locals.home = [
   { id: shortid.generate(),
@@ -19,8 +21,9 @@ app.locals.home = [
   }
 ]
 
-app.get('api/v1/home', (request, response) => {
+app.get('/api/v1/home', (request, response) => {
   return response.status(200).json(app.locals.home)
 })
+app.set('port', 3001);
 
-export default app
+module.exports = app
