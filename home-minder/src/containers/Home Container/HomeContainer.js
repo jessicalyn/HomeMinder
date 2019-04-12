@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { HomeCard } from '../HomeCard/HomeCard'
 
 export class HomeContainer extends Component {
   render() {
+    const allItems = this.props.items.map(item => {
+      return <HomeCard key={ item.id } {...item} />
+    })
     return(
       <div>
-        <h2>Home Container</h2>
+        { allItems }
       </div>
     )
   }
 }
+
+export const mapStateToProps = (state) => ({
+  items: state.items
+})
+
+export default connect(mapStateToProps)(HomeContainer)
