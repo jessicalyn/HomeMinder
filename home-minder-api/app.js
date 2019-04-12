@@ -1,26 +1,14 @@
 const express = require('express');
 const app = express();
-
 const cors = require('cors')
-app.use(cors());
 app.use(express.json());
-const shortid = require('shortid');
+app.use(cors());
+import { homeData } from './homeData'
 
-app.locals.home = [
-  { id: shortid.generate(),
-    room: "Kitchen",
-    category: "Filters",
-    name: "Refrigerator Filter",
-    replaceRecommend: "6 months",
-    replaceUserPref: "",
-    brand: "",
-    model: "",
-    purchaseLocation: "",
-    replacedHistory: [],
-  }
-]
+app.locals.home = homeData
 
 app.get('/api/v1/home', (request, response) => {
+  console.log(app.locals.home)
   return response.status(200).json(app.locals.home)
 })
 
