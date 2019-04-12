@@ -9,7 +9,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "6 months",
+    recommendation: "6 months",
     userScheduled: "",
     type: "Replace"
   },
@@ -21,7 +21,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "2-4 weeks",
+    recommendation: "2-4 weeks",
     userScheduled: "",
     type: "Replace"
   },
@@ -33,7 +33,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "1-3 months",
+    recommendation: "1-3 months",
     userScheduled: "",
     type: "Replace"
   },
@@ -45,7 +45,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "yearly",
+    recommendation: "yearly",
     userScheduled: "",
     type: "Check Expiration"
   },
@@ -57,7 +57,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "yearly",
+    recommendation: "yearly",
     userScheduled: "",
     type: "Check Expiration"
   },
@@ -69,7 +69,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "yearly",
+    recommendation: "yearly",
     userScheduled: "",
     type: "Replace"
   },
@@ -81,7 +81,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "30-90 days",
+    recommendation: "30-90 days",
     userScheduled: "",
     type: "Replace"
   },
@@ -93,7 +93,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "30-90 days",
+    recommendation: "30-90 days",
     userScheduled: "",
     type: "Replace"
   },
@@ -105,7 +105,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "30-90 days",
+    recommendation: "30-90 days",
     userScheduled: "",
     type: "Replace"
   },
@@ -117,7 +117,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "yearly",
+    recommendation: "yearly",
     userScheduled: "",
     type: "Check Expiration"
   },
@@ -129,7 +129,7 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "yearly",
+    recommendation: "yearly",
     userScheduled: "",
     type: "Check Expiration"
   },

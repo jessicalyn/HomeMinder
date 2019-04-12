@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
-import { Audit } from '../Audit/Audit';
+import Audit from '../Audit/Audit';
 import { error404 } from '../../components/error404/error404';
 import HomeContainer from '../Home Container/HomeContainer';
-import { fetchAllItems } from '../../thunks/fetchAllItems'
+import { fetchAllItems } from '../../thunks/fetchAllItems';
+import HomeCard from '../HomeCard/HomeCard'
 
 export class App extends Component {
 
@@ -19,12 +20,14 @@ export class App extends Component {
       <div className='app'>
         <header className='app-header'>
           <h1>HomeMinder</h1>
+          <NavLink to='/audit'>Audit</NavLink>
           { this.props.error.message }
         </header>
         <div className='app-container'>
           <Switch>
             <Route exact path='/' component={HomeContainer}/>
             <Route path="/audit" component={Audit}/>
+            <Route path="/:id" component={HomeCard}/>
             <Route component={error404}/>
           </Switch>
         </div>
