@@ -10,7 +10,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "6 months",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Replace"
   },
   { id: shortid.generate(),
@@ -22,7 +22,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "2-4 weeks",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Replace"
   },
   { id: shortid.generate(),
@@ -34,7 +34,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "1-3 months",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Replace"
   },
   { id: shortid.generate(),
@@ -46,7 +46,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "yearly",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Check Expiration"
   },
   { id: shortid.generate(),
@@ -58,7 +58,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "yearly",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Check Expiration"
   },
   { id: shortid.generate(),
@@ -70,7 +70,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "yearly",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Replace"
   },
   { id: shortid.generate(),
@@ -82,7 +82,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "30-90 days",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Replace"
   },
   { id: shortid.generate(),
@@ -94,7 +94,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "30-90 days",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Replace"
   },
   { id: shortid.generate(),
@@ -106,7 +106,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "30-90 days",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Replace"
   },
   { id: shortid.generate(),
@@ -118,7 +118,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "yearly",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Check Expiration"
   },
   { id: shortid.generate(),
@@ -130,7 +130,7 @@ export const homeData = [
     lastReplaced: "",
     purchaseLocation: "",
     replaceRecommend: "yearly",
-    replaceUserPref: "",
+    userScheduled: "",
     type: "Check Expiration"
   },
   { id: shortid.generate(),
@@ -141,8 +141,8 @@ export const homeData = [
     model: "",
     lastReplaced: "",
     purchaseLocation: "",
-    replaceRecommend: "yearly",
-    replaceUserPref: "",
+    recommendation: "yearly",
+    userScheduled: "",
     type: "Check Expiration"
   },
 ]

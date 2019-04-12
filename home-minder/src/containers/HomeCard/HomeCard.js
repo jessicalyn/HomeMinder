@@ -10,10 +10,10 @@ export class HomeCard extends Component {
   }
 
   render() {
-    const { item } = this.props
+    const { name } = this.props
     return(
       <div>
-        { item.name }
+        { name }
       </div>
     )
   }

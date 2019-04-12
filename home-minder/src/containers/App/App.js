@@ -4,12 +4,14 @@ import { connect } from 'react-redux';
 import './App.css';
 import { Audit } from '../Audit/Audit';
 import { error404 } from '../../components/error404/error404';
-import { HomeContainer } from '../Home Container/HomeContainer'
+import HomeContainer from '../Home Container/HomeContainer';
+import { fetchAllItems } from '../../thunks/fetchAllItems'
 
 export class App extends Component {
 
   componentDidMount() {
-    
+    const url = "http://localhost:3001/api/v1/home"
+    this.props.fetchAllItems(url)
   }
 
   render() {
@@ -17,6 +19,7 @@ export class App extends Component {
       <div className='app'>
         <header className='app-header'>
           <h1>HomeMinder</h1>
+          { this.props.error.message }
         </header>
         <div className='app-container'>
           <Switch>
@@ -31,7 +34,12 @@ export class App extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  items: state.items
+  items: state.items,
+  error: state.error
 })
 
-export default connect(mapStateToProps)(App);
+export const mapDispatchToProps = (dispatch) => ({
+  fetchAllItems: (url) => dispatch(fetchAllItems(url))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

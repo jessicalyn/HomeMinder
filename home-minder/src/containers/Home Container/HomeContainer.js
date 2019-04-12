@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { HomeCard } from '../HomeCard/HomeCard'
+import HomeCard from '../HomeCard/HomeCard'
 
 export class HomeContainer extends Component {
-  render() {
-    const allItems = this.props.items.map(item => {
+
+  displayAllItems = () => {
+    return this.props.items.map(item => {
       return <HomeCard key={ item.id } {...item} />
     })
+  }
+
+  render() {
     return(
       <div>
-        { allItems }
+        { this.props.items && this.displayAllItems() }
       </div>
     )
   }
