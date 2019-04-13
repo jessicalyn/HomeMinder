@@ -1,0 +1,12 @@
+.audit-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 50%;
+  margin: auto
+}
+
+label {
+  padding-top: 1rem
+}
+
