@@ -53,7 +53,7 @@ export class HomeCard extends Component {
           <input type="text" name="purchaseLocation" value={ this.state.purchaseLocation } onChange={ this.updateValue }></input>
           <label>Last { type } Date: { lastReplaced } </label>
           <label>Recommended { type } Timeline: { replaceRecommend }</label>
-          <label>Choose next { type.toLowerCase() } date:</label>
+          <label>Choose next { type } date:</label>
           <input type="text" name="userSchedule" value={ this.state.userScheduled } onChange={ this.updateValue }></input>
           <button>Add to Schedule</button>
         </form>

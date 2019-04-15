@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { storeAllItemsReducer } from './storeAllItemsReducer';
+import { itemsReducer } from './itemsReducer';
 import { isLoadingReducer } from './isLoadingReducer';
 import { hasErrorReducer } from './hasErrorReducer';
 
 const rootReducer = combineReducers({
-  items: storeAllItemsReducer,
+  items: itemsReducer,
   isLoading: isLoadingReducer,
   error: hasErrorReducer
 })
