@@ -8,10 +8,9 @@ export class Audit extends Component {
     //should this go in component did mount instead? okay to have a bunch in render?
     const notScheduled = this.props.items.filter(item => item.userScheduled === "")
     const showNotScheduled = notScheduled.map(item => {
-      const url = `/${item.id}`
       return <div>
         <h3>{ item.room } { item.name }</h3>
-        <NavLink to={url} >Update Item</NavLink>
+        <NavLink to={`/${item.id}`}>To HomeCard</NavLink>
       </div>
     })
     return(

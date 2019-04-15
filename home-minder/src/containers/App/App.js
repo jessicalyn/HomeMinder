@@ -27,7 +27,14 @@ export class App extends Component {
           <Switch>
             <Route exact path='/' component={HomeContainer}/>
             <Route path="/audit" component={Audit}/>
-            <Route path="/:id" component={HomeCard}/>
+            <Route path='/:id' render={({ match }) => {
+              const { id } = match.params
+              const item = this.props.items.find(item => item.id === id)
+                    
+              if (item) {
+                return <HomeCard {...item} />
+              }
+            }} />
             <Route component={error404}/>
           </Switch>
         </div>

@@ -6,7 +6,7 @@ export class HomeContainer extends Component {
 
   displayAllItems = () => {
     return this.props.items.map(item => {
-      return <HomeCard key={ item.id } {...item} />
+      return <HomeCard key={ item.id } item={ item } />
     })
   }
 
