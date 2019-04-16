@@ -8,15 +8,9 @@ export class HomeCard extends Component {
     super();
     this.state = {
       brand: "",
-      // category: "",
-      // id: "",
-      // lastReplaced: "",
       model: "",
       name: "",
       purchaseLocation: "",
-      // replaceRecommend: "",
-      // room: "",
-      // type: "",
       userScheduled: "",
     }
   }
@@ -30,7 +24,6 @@ export class HomeCard extends Component {
     e.preventDefault()
     const data = this.state
     const { id } = this.props
-    console.log("id", id)
     const url = `http://localhost:3001/api/v1/${id}`
     const options = {
       method: 'PUT',
@@ -38,7 +31,6 @@ export class HomeCard extends Component {
       headers: { "Content-Type": "application/json" }
     }
     await this.props.putUpdatedItem(url, options)
-    console.log("stored updates", )
   }
 
   render() {
