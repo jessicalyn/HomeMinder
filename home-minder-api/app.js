@@ -12,30 +12,40 @@ app.get('/api/v1/home', (request, response) => {
 })
 
 app.get('/api/v1/:id', (request, response) => {
-  const itemById = app.locals.home.filter(item => request.id == item.id)
+  const { home } = app.locals
+  const itemById = app.locals.home.filter(item => request.params.id == item.id)
   return response.status(200).json(itemById)
 })
 
 app.put('/api/v1/:id', (request, response) => {
-  const { home } = app.locals.home
+  const { home } = app.locals
+  const { id } = request.params
+  const { brand, model, purchaseLocation, userScheduled } = request.body
   
   let found = false
   const updatedHomeData = home.map(item => {
-    if (request.id == item.id) {
+    if (id == item.id) {
       found = true
       return {
-        brand: request.brand,
-        model: request.model,
-        purchaseLocation: request.purchaseLocation,
-        userScheduled: request.userScheduled,
+        brand: brand || item.brand,
+        model: model || item.model,
+        purchaseLocation: purchaseLocation || item.purchaseLocation,
+        userScheduled: userScheduled || item.userScheduled,
+        id,
+        room: item.room,
+        category: item.category,
+        name: item.name,
+        lastReplaced: item.lastReplaced,
+        recommendation: item.recommendation,
+        type: item.type
       }
     } else {
       return item
     }
   })
+  if(!found) return response.status(404).json("Item was not found")
   
-  home = updatedHomeData
-  console.log(home)
+  app.locals.home = updatedHomeData
   return response.status(204)
 })
 
