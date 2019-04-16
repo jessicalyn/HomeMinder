@@ -1,4 +1,4 @@
-import { isLoading, hasError } from "../actions";
+import { isLoading, hasError, updateItem } from "../actions";
 
 export const putUpdatedItem = (url, options) => {
   return async (dispatch) => {
@@ -10,7 +10,8 @@ export const putUpdatedItem = (url, options) => {
       }
       dispatch(isLoading(false))
       const result = await response.json()
-      dispatch(updateItem(result))
+      console.log("put result", result)
+      // dispatch(updateItem(result))
     } catch (error) {
       dispatch(hasError(error.message))
     }

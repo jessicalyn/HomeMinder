@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './HomeCard.css'
+import './HomeCard.css';
+import { putUpdatedItem } from '../../thunks/putUpdatedItem'
 
 export class HomeCard extends Component {
   constructor(){
     super();
     this.state = {
       brand: "",
-      category: "",
-      id: "",
-      lastReplaced: "",
+      // category: "",
+      // id: "",
+      // lastReplaced: "",
       model: "",
       name: "",
       purchaseLocation: "",
-      replaceRecommend: "",
-      room: "",
-      type: "",
+      // replaceRecommend: "",
+      // room: "",
+      // type: "",
       userScheduled: "",
     }
   }
@@ -28,14 +29,16 @@ export class HomeCard extends Component {
   storeUpdates = async (e) => {
     e.preventDefault()
     const data = this.state
-    const url = `http://localhost:3001/api/v1/${this.state.id}`
+    const { id } = this.props
+    console.log("id", id)
+    const url = `http://localhost:3001/api/v1/${id}`
     const options = {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" }
     }
     await this.props.putUpdatedItem(url, options)
-    console.log("stored updates")
+    console.log("stored updates", )
   }
 
   render() {
@@ -67,7 +70,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-
+  putUpdatedItem: (url, options) => dispatch(putUpdatedItem(url, options))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeCard)

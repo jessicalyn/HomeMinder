@@ -2,7 +2,7 @@ import { isLoadingReducer } from './isLoadingReducer';
 import * as actions from '../actions'
 
 describe('isLoadingReducer', () => {
-  it('should return the initial state', () => {
+  it('should return the intital state', () => {
     const expected = false
 
     const result = isLoadingReducer(undefined, {})
@@ -10,12 +10,24 @@ describe('isLoadingReducer', () => {
     expect(result).toEqual(expected)
   });
 
-  it('should return state with a new boolean', () => {
+  it('should return a state with a loading boolean', () => {
     const initialState = false
     const predicted = true
 
     const action = actions.isLoading(true)
+
     const result = isLoadingReducer(initialState, action)
+
+    expect(result).toEqual(predicted)
+  });
+
+  it('should return a state with a loading boolean', () => {
+    const intitialState = false
+    const predicted = true
+
+    const action = actions.isLoading(true)
+
+    const result = isLoadingReducer(intitialState, action)
 
     expect(result).toEqual(predicted)
   })

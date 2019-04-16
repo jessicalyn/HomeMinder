@@ -29,8 +29,7 @@ export class App extends Component {
             <Route path="/audit" component={Audit}/>
             <Route path='/:id' render={({ match }) => {
               const { id } = match.params
-              const item = this.props.items.find(item => item.id === id)
-                    
+              const item = this.props.items.find(item => item.id == id)  
               if (item) {
                 return <HomeCard {...item} />
               }
