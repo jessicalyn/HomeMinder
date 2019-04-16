@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeCard.css';
-import { putUpdatedItem } from '../../thunks/putUpdatedItem'
+import { putUpdatedItem } from '../../thunks/putUpdatedItem';
+import Calendar from 'react-calendar'
 
 export class HomeCard extends Component {
   constructor(){
@@ -20,7 +21,12 @@ export class HomeCard extends Component {
     this.setState({ [name]: value })
   }
 
+  updateCalendar = (userScheduled) => {
+    this.setState({ userScheduled })
+  }
+
   storeUpdates = async (e) => {
+    console.log("storing")
     e.preventDefault()
     const data = this.state
     const { id } = this.props
@@ -49,7 +55,7 @@ export class HomeCard extends Component {
           <label>Last { type } Date: { lastReplaced } </label>
           <label>Recommended { type } Timeline: { replaceRecommend }</label>
           <label>Choose next { type } date:</label>
-          <input type="text" name="userSchedule" value={ this.state.userScheduled } onChange={ this.updateValue }></input>
+          <Calendar name="userSchedule" value={ this.state.userScheduled } onChange={ this.updateCalendar }/>
           <button>Add to Schedule</button>
         </form>
       </div>
