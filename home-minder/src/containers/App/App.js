@@ -23,7 +23,7 @@ export class App extends Component {
           <h1>HomeMinder</h1>
           <NavLink className="nav-link" to='/'>Home</NavLink>
           <NavLink className="nav-link" to='/audit'>Audit</NavLink>
-          { error }
+          { error && console.log(error)}
         </header>
         <div className='app-container'>
           <Switch>

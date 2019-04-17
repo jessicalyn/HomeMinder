@@ -16,7 +16,7 @@ export class HomeContainer extends Component {
         <h3>Schedule reminders for items around your home</h3>
         <div>
           <h4>Upcoming Reminders</h4>
-          { orderedItems.map(item => <ScheduledItem {...item} />) }
+          { orderedItems.map(item => <ScheduledItem key={ item.id } {...item} />) }
         </div>
       </div>
     )

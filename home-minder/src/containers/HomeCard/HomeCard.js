@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeCard.css';
 import { putUpdatedItem } from '../../thunks/putUpdatedItem';
-import Calendar from 'react-calendar'
+import Calendar from 'react-calendar';
+import { Redirect } from 'react-router-dom'
 
 export class HomeCard extends Component {
   constructor(){
@@ -13,14 +14,14 @@ export class HomeCard extends Component {
       name: "",
       purchaseLocation: "",
       userScheduled: "",
-      replaceRecommend: ""
+      recommendation: "",
+      toHomepage: false
     }
   }
 
   componentDidMount() {
-    console.log("props", this.props)
-    const { brand, model, name, purchaseLocation, replaceRecommend } = this.props
-    this.setState({ brand, model, name, purchaseLocation, replaceRecommend })
+    const { brand, model, name, purchaseLocation, recommendation } = this.props
+    this.setState({ brand, model, name, purchaseLocation, recommendation })
   }
 
   updateValue = (e) => {
@@ -44,10 +45,12 @@ export class HomeCard extends Component {
       headers: { "Content-Type": "application/json" }
     }
     await putUpdatedItem(url, options)
+    this.setState({ toHomepage: true })
   }
 
   render() {
-    const { name, replaceRecommend, room, type } = this.props
+    const { name, recommendation, room, type } = this.props
+    if (this.state.toHomepage) return <Redirect to='/' />
     return(
       <div className="home-card">
         <h2>{ name } in your { room }</h2>
@@ -59,7 +62,7 @@ export class HomeCard extends Component {
           <input type="text" name="model" value={ this.state.model } onChange={ this.updateValue }></input>
           <label>Purchase Location: </label>
           <input type="text" name="purchaseLocation" value={ this.state.purchaseLocation } onChange={ this.updateValue }></input>
-          <label>Recommended { type } Timeline: { replaceRecommend }</label>
+          <label>Recommended { type } Timeline: <span>{ recommendation }</span></label>
           <label>Choose next { type } date:</label>
           <Calendar className="calendar" name="userSchedule" onChange={ this.updateCalendar }/>
           <button className="card-button">Add to Schedule</button>

@@ -46,7 +46,7 @@ app.put('/api/v1/:id', (request, response) => {
   if(!found) return response.status(404).json("Item was not found")
   
   app.locals.home = updatedHomeData
-  return response.status(204)
+  return response.status(200).json(app.locals.home)
 })
 
 export default app;
