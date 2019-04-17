@@ -21,5 +21,5 @@ ScheduledItem.propTypes = {
   room: PropTypes.string,
   name: PropTypes.string,
   userScheduled: PropTypes.string,
-  id: PropTypes.string
+  id: PropTypes.number
 }

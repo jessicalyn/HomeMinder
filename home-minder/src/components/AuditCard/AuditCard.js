@@ -15,5 +15,5 @@ export default AuditCard
 AuditCard.propTypes = {
   room: PropTypes.string,
   name: PropTypes.string,
-  id: PropTypes.string
+  id: PropTypes.number
 }
