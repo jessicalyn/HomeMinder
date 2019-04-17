@@ -20,7 +20,8 @@ export class App extends Component {
       <div className='app'>
         <header className='app-header'>
           <h1>HomeMinder</h1>
-          <NavLink to='/audit'>Audit</NavLink>
+          <NavLink className="nav-link" to='/'>Home</NavLink>
+          <NavLink className="nav-link" to='/audit'>Audit</NavLink>
           { this.props.error.message }
         </header>
         <div className='app-container'>

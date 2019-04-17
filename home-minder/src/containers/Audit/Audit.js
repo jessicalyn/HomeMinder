@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux';
+import './Audit.css';
+import AuditCard from '../../components/AuditCard/AuditCard'
 
 export class Audit extends Component {
 
   render() {
-    //should this go in component did mount instead? okay to have a bunch in render?
     const notScheduled = this.props.items.filter(item => item.userScheduled === "")
-    const showNotScheduled = notScheduled.map(item => {
-      return <div>
-        <h3>{ item.room } { item.name }</h3>
-        <NavLink to={`/${item.id}`}>To HomeCard</NavLink>
-      </div>
-    })
     return(
       <div>
         <h2>Home Audit</h2>
-        { showNotScheduled }
+        <h3>Click an item below to schedule a replacement date</h3>
+        <div className="audit-container">
+          { notScheduled.map(item => <AuditCard key={ item.id } {...item}/>) }
+        </div>
       </div>
     )
   }

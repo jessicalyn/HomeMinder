@@ -16,13 +16,21 @@ export class HomeCard extends Component {
     }
   }
 
+  componentDidMount() {
+    console.log("props", this.props)
+    const { brand, model, name, purchaseLocation } = this.props
+    this.setState({ brand, model, name })
+  }
+
   updateValue = (e) => {
     const { name, value } = e.target
     this.setState({ [name]: value })
   }
 
   updateCalendar = (userScheduled) => {
-    this.setState({ userScheduled })
+    const timestamp = new Date(userScheduled)
+    console.log(timestamp)
+    // this.setState({ userScheduled })
   }
 
   storeUpdates = async (e) => {
@@ -42,7 +50,7 @@ export class HomeCard extends Component {
   render() {
     const { lastReplaced, name, replaceRecommend, room, type } = this.props
     return(
-      <div>
+      <div className="home-card">
         <form className="audit-form" onSubmit={ this.storeUpdates }>
           <h2>{ name } in your { room }</h2>
           <h3>Complete the sections below to schedule your next Home Reminder</h3>
