@@ -13,13 +13,14 @@ export class HomeCard extends Component {
       name: "",
       purchaseLocation: "",
       userScheduled: "",
+      replaceRecommend: ""
     }
   }
 
   componentDidMount() {
     console.log("props", this.props)
-    const { brand, model, name, purchaseLocation } = this.props
-    this.setState({ brand, model, name })
+    const { brand, model, name, purchaseLocation, replaceRecommend } = this.props
+    this.setState({ brand, model, name, purchaseLocation, replaceRecommend })
   }
 
   updateValue = (e) => {
@@ -48,23 +49,22 @@ export class HomeCard extends Component {
   }
 
   render() {
-    const { lastReplaced, name, replaceRecommend, room, type } = this.props
+    const { name, replaceRecommend, room, type } = this.props
     return(
       <div className="home-card">
-        <form className="audit-form" onSubmit={ this.storeUpdates }>
-          <h2>{ name } in your { room }</h2>
-          <h3>Complete the sections below to schedule your next Home Reminder</h3>
+        <h2>{ name } in your { room }</h2>
+        <h3>Complete the sections below to schedule your next Reminder</h3>
+        <form className="home-form" onSubmit={ this.storeUpdates }>
           <label>Brand: </label>
           <input type="text" name="brand" value={ this.state.brand } onChange={ this.updateValue }></input>
           <label>Model: </label>
           <input type="text" name="model" value={ this.state.model } onChange={ this.updateValue }></input>
           <label>Purchase Location: </label>
           <input type="text" name="purchaseLocation" value={ this.state.purchaseLocation } onChange={ this.updateValue }></input>
-          <label>Last { type } Date: { lastReplaced } </label>
           <label>Recommended { type } Timeline: { replaceRecommend }</label>
           <label>Choose next { type } date:</label>
-          <Calendar name="userSchedule" value={ this.state.userScheduled } onChange={ this.updateCalendar }/>
-          <button>Add to Schedule</button>
+          <Calendar className="calendar" name="userSchedule" value={ this.state.userScheduled } onChange={ this.updateCalendar }/>
+          <button className="card-button">Add to Schedule</button>
         </form>
       </div>
     )
