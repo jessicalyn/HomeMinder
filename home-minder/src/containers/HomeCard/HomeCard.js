@@ -31,6 +31,7 @@ export class HomeCard extends Component {
 
   updateCalendar = (userScheduled) => {
     const timestamp = new Date(userScheduled)
+    console.log(timestamp)
     this.setState({ userScheduled: timestamp })
   }
 

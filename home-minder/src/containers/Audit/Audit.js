@@ -6,7 +6,8 @@ import AuditCard from '../../components/AuditCard/AuditCard'
 export class Audit extends Component {
 
   render() {
-    const notScheduled = this.props.items.filter(item => item.userScheduled === "")
+    const { items } = this.props
+    const notScheduled = items.filter(item => item.userScheduled === "")
     return(
       <div className="audit-container">
         <h2>Home Audit</h2>

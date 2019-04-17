@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import './App.css';
 import Audit from '../Audit/Audit';
 import error404 from '../../components/error404/error404';
-import HomeContainer from '../Home Container/HomeContainer';
+import HomeContainer from '../HomeContainer/HomeContainer';
 import { fetchAllItems } from '../../thunks/fetchAllItems';
 import HomeCard from '../HomeCard/HomeCard'
 
