@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Audit.css';
-import AuditCard from '../../components/AuditCard/AuditCard'
+import AuditCard from '../../components/AuditCard/AuditCard';
+import PropTypes from 'prop-types';
 
 export class Audit extends Component {
 
@@ -25,3 +26,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(Audit);
+
+Audit.propTypes = {
+  items: PropTypes.array
+}

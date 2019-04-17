@@ -1,6 +1,7 @@
 import React from 'react';
 import './ScheduledItem.css';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const ScheduledItem = ({ room, name, userScheduled, id }) => {
   userScheduled = new Date(userScheduled)
@@ -15,3 +16,10 @@ const ScheduledItem = ({ room, name, userScheduled, id }) => {
 }
 
 export default ScheduledItem
+
+ScheduledItem.propTypes = {
+  room: PropTypes.string,
+  name: PropTypes.string,
+  userScheduled: PropTypes.string,
+  id: PropTypes.string
+}

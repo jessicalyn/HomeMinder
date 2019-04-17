@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeContainer.css';
-import ScheduledItem from '../../components/ScheduledItem/ScheduledItem'
+import ScheduledItem from '../../components/ScheduledItem/ScheduledItem';
+import PropTypes from 'prop-types';
 
 export class HomeContainer extends Component {
 
@@ -28,3 +29,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(HomeContainer)
+
+HomeContainer.propTypes = {
+  items: PropTypes.array
+}

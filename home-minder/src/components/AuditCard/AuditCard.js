@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './AuditCard.css'
+import './AuditCard.css';
+import PropTypes from 'prop-types';
 
 const AuditCard = ({ room, name, id }) => (
   <div className="audit-card">
@@ -10,3 +11,9 @@ const AuditCard = ({ room, name, id }) => (
 )
 
 export default AuditCard
+
+AuditCard.propTypes = {
+  room: PropTypes.string,
+  name: PropTypes.string,
+  id: PropTypes.string
+}

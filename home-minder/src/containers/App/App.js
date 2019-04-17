@@ -6,7 +6,8 @@ import Audit from '../Audit/Audit';
 import error404 from '../../components/error404/error404';
 import HomeContainer from '../HomeContainer/HomeContainer';
 import { fetchAllItems } from '../../thunks/fetchAllItems';
-import HomeCard from '../HomeCard/HomeCard'
+import HomeCard from '../HomeCard/HomeCard';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
 
@@ -53,3 +54,9 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+HomeCard.propTypes = {
+  items: PropTypes.array,
+  error: PropTypes.string,
+  fetchAllItems: PropTypes.func
+}

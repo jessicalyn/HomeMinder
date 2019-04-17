@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import './HomeCard.css';
 import { putUpdatedItem } from '../../thunks/putUpdatedItem';
 import Calendar from 'react-calendar';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export class HomeCard extends Component {
   constructor(){
@@ -82,3 +83,15 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeCard)
+
+HomeCard.propTypes = {
+  items: PropTypes.array,
+  putUpdatedItem: PropTypes.func,
+  brand: PropTypes.string,
+  model: PropTypes.string,
+  name: PropTypes.string,
+  purchaseLocation: PropTypes.string,
+  userScheduled: PropTypes.string,
+  recommendation: PropTypes.string,
+  toHomepage: PropTypes.bool
+}
