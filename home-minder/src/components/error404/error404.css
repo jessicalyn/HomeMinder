@@ -1,0 +1,9 @@
+.error-container {
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 2rem;
+  width: 75%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 5rem
+}

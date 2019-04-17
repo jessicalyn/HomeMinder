@@ -1,0 +1,41 @@
+.home-card {
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 2rem;
+  width: 75%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 1.5rem
+}
+
+.home-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 75%;
+  margin: auto;
+  align-items: center
+}
+
+label {
+  padding-top: 1rem;
+  font-weight: 700
+}
+
+span {
+  font-weight: 300
+}
+
+input {
+  width: 60%;
+  height: 1.5rem;
+}
+
+.card-button {
+  width: 15rem;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 700
+}

@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScheduledItem should match the snapshot with data passed in 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ScheduledItem
+    id={1}
+    name="Refrigerator Water Filter"
+    room="Kitchen"
+    userScheduled="2019-04-11T06:00:00.000Z"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="scheduled-date"
+        >
+          Thu Apr 11 2019
+        </p>,
+        <div
+          className="item-block"
+        >
+          <p
+            className="scheduled-name"
+          >
+            Kitchen
+             
+            Refrigerator Water Filter
+          </p>
+          <NavLink
+            to="/item/1"
+          >
+            View Reminder
+          </NavLink>
+        </div>,
+      ],
+      "className": "scheduled-item",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Thu Apr 11 2019",
+          "className": "scheduled-date",
+        },
+        "ref": null,
+        "rendered": "Thu Apr 11 2019",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="scheduled-name"
+            >
+              Kitchen
+               
+              Refrigerator Water Filter
+            </p>,
+            <NavLink
+              to="/item/1"
+            >
+              View Reminder
+            </NavLink>,
+          ],
+          "className": "item-block",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Kitchen",
+                " ",
+                "Refrigerator Water Filter",
+              ],
+              "className": "scheduled-name",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Kitchen",
+              " ",
+              "Refrigerator Water Filter",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "View Reminder",
+              "to": "/item/1",
+            },
+            "ref": null,
+            "rendered": "View Reminder",
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="scheduled-date"
+          >
+            Thu Apr 11 2019
+          </p>,
+          <div
+            className="item-block"
+          >
+            <p
+              className="scheduled-name"
+            >
+              Kitchen
+               
+              Refrigerator Water Filter
+            </p>
+            <NavLink
+              to="/item/1"
+            >
+              View Reminder
+            </NavLink>
+          </div>,
+        ],
+        "className": "scheduled-item",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Thu Apr 11 2019",
+            "className": "scheduled-date",
+          },
+          "ref": null,
+          "rendered": "Thu Apr 11 2019",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="scheduled-name"
+              >
+                Kitchen
+                 
+                Refrigerator Water Filter
+              </p>,
+              <NavLink
+                to="/item/1"
+              >
+                View Reminder
+              </NavLink>,
+            ],
+            "className": "item-block",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Kitchen",
+                  " ",
+                  "Refrigerator Water Filter",
+                ],
+                "className": "scheduled-name",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Kitchen",
+                " ",
+                "Refrigerator Water Filter",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "View Reminder",
+                "to": "/item/1",
+              },
+              "ref": null,
+              "rendered": "View Reminder",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
