@@ -6,7 +6,7 @@ HomeMinder is a solo project to save reminders for household items that need to 
 
 ## Preview:
 
-<img src="home-minder/src/HomeMinder.png" alt="HomeMinder screenshot">
+<img src="src/HomeMinder.png" alt="HomeMinder screenshot">
 
 ## Getting Started:
 
