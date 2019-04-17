@@ -5,7 +5,7 @@ import './AuditCard.css'
 const AuditCard = ({ room, name, id }) => (
   <div className="audit-card">
     <h3>{ room } { name }</h3>
-    <NavLink to={`/${id}`}>Schedule</NavLink>
+    <NavLink to={`/item/${id}`}>Schedule</NavLink>
   </div>
 )
 

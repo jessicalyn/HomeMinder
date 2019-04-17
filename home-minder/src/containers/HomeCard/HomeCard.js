@@ -30,22 +30,20 @@ export class HomeCard extends Component {
 
   updateCalendar = (userScheduled) => {
     const timestamp = new Date(userScheduled)
-    console.log(timestamp)
-    // this.setState({ userScheduled })
+    this.setState({ userScheduled: timestamp })
   }
 
-  storeUpdates = async (e) => {
-    console.log("storing")
+  handleSubmit = async (e) => {
     e.preventDefault()
     const data = this.state
-    const { id } = this.props
+    const { id, putUpdatedItem } = this.props
     const url = `http://localhost:3001/api/v1/${id}`
     const options = {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" }
     }
-    await this.props.putUpdatedItem(url, options)
+    await putUpdatedItem(url, options)
   }
 
   render() {
@@ -54,7 +52,7 @@ export class HomeCard extends Component {
       <div className="home-card">
         <h2>{ name } in your { room }</h2>
         <h3>Complete the sections below to schedule your next Reminder</h3>
-        <form className="home-form" onSubmit={ this.storeUpdates }>
+        <form className="home-form" onSubmit={ this.handleSubmit }>
           <label>Brand: </label>
           <input type="text" name="brand" value={ this.state.brand } onChange={ this.updateValue }></input>
           <label>Model: </label>
@@ -63,7 +61,7 @@ export class HomeCard extends Component {
           <input type="text" name="purchaseLocation" value={ this.state.purchaseLocation } onChange={ this.updateValue }></input>
           <label>Recommended { type } Timeline: { replaceRecommend }</label>
           <label>Choose next { type } date:</label>
-          <Calendar className="calendar" name="userSchedule" value={ this.state.userScheduled } onChange={ this.updateCalendar }/>
+          <Calendar className="calendar" name="userSchedule" onChange={ this.updateCalendar }/>
           <button className="card-button">Add to Schedule</button>
         </form>
       </div>

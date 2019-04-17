@@ -10,7 +10,6 @@ export const putUpdatedItem = (url, options) => {
       }
       dispatch(isLoading(false))
       const result = await response.json()
-      console.log("put result", result)
       // dispatch(updateItem(result))
     } catch (error) {
       dispatch(hasError(error.message))
