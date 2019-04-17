@@ -20,15 +20,4 @@ describe('isLoadingReducer', () => {
 
     expect(result).toEqual(predicted)
   });
-
-  it('should return a state with a loading boolean', () => {
-    const intitialState = false
-    const predicted = true
-
-    const action = actions.isLoading(true)
-
-    const result = isLoadingReducer(intitialState, action)
-
-    expect(result).toEqual(predicted)
-  })
 })

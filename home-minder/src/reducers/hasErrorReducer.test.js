@@ -1,4 +1,5 @@
 import { hasErrorReducer } from './hasErrorReducer';
+import * as actions from '../actions'
 
 describe('hasErrorReducer', () => {
   it('should return the initial state', () => {
@@ -10,10 +11,12 @@ describe('hasErrorReducer', () => {
   });
 
   it('should return state with an error message', () => {
-    const expected = ""
+    const initialState = ""
+    const predicted = "Something went wrong"
+    const action = actions.hasError("Something went wrong")
 
-    const result = hasErrorReducer(undefined, "Something went wrong")
+    const result = hasErrorReducer(initialState, action)
 
-    expect(result).toEqual(expected)
+    expect(result).toEqual(predicted)
   })
 })
