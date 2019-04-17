@@ -8,10 +8,10 @@ export class Audit extends Component {
   render() {
     const notScheduled = this.props.items.filter(item => item.userScheduled === "")
     return(
-      <div>
+      <div className="audit-container">
         <h2>Home Audit</h2>
         <h3>Click an item below to schedule a replacement date</h3>
-        <div className="audit-container">
+        <div className="audit-cards-container">
           { notScheduled.map(item => <AuditCard key={ item.id } {...item}/>) }
         </div>
       </div>

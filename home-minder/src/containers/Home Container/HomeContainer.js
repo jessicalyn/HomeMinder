@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import HomeCard from '../HomeCard/HomeCard'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import './HomeContainer.css'
 
 export class HomeContainer extends Component {
 
   render() {
     return(
-      <div>
+      <div className="home-container">
         { }
       </div>
     )

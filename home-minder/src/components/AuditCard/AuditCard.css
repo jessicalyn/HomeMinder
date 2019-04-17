@@ -1,0 +1,11 @@
+.audit-card {
+  border: solid .1rem black;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 200px;
+  height: 100px;
+}
+
+h3 {
+  margin-top: 0
+}
